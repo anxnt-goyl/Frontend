@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+margin:0px;
+padding:0px
+}
+body,html{
+  display:flex;
+  justify-content:center;
+
+}
+.container{
+  border:3px solid aqua;
+  height:570px;
+  width:400px;
+  background-color:aqua;
+  border-radius:10px;
+  border-radius: 15px 15px 10px 10px;
+  transition:all 0.5s ease-in;
+  margin-top: 10px;
+  &:hover{
+    box-shadow:4px 4px 8px black;
+    scale:1.01;
+  }  
+}
+.img1{
+  height:60%;
+  width:100%;
+  background-size:cover;
+  background:aqua;
+  border-radius:10px;
+}
+img{
+  height:100%;
+  width:100%;  
+  border-radius:15px;
+  transition:all 0.5s ease-in;
+}
+h1{
+  text-align:center;
+  
+}
+ul{
+  margin:20px 0 0 30px;
+}
+h3{
+  margin: 20px 0 0 30px;
+}
+button{
+  padding:10px 20px;
+/*   margin-left:150px; */
+  margin-top:20px;
+  background:linear-gradient(45deg,aqua,blue);
+  border:none;
+  border-radius:1rem;
+  text-transform:uppercase;
+  transition:all 0.5s ease-in;
+  &:hover{
+    box-shadow:3px 3px 6px blue;
+  }  
+}
+.btn{
+  display: flex;
+  justify-content:space-evenly;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container"> 
+  <div class="img1"><img src="https://i.pinimg.com/564x/20/e4/f3/20e4f3d3226e6fc3e8b8a311993e8252.jpg"></img></div>
+  <div>
+    <h1>Chhota Bheem</h1>
+    <ul>
+      <li><b>Name</b>: Chotta Bheem Weds Chutki</li>
+      <li><b>Venue</b>: Dholakpur</li>
+      <li><b>Dowry</b>: 7 crore Laddu</li> 
+      <li><b>Age limit</b>: koi seema nii</li>      
+    </ul>
+    <h3>   Special Note : Thanos Fans not allowed</h3>
+  </div>
+<div class="btn">
+  <button>Watch Now</button>
+  <button>Watch Later</button>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>
