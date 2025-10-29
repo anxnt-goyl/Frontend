@@ -57,4 +57,39 @@
 //     document.writeln("no");
 //     document.writeln(typeof a);
 // }
-const arr = [1,2,3,4,5,6,7,8,9,10,'anant',null,undefined,NaN, false];
+// const arr = [1,2,3,4,5,6,7,8,9,10,'anant',null,undefined,NaN, false];
+// const arr2 = new Array(8);
+// const arr3 = new Array("abc" , 1.0,"s d" , null);
+// console.log(arr );
+// console.log(arr2);
+// console.log(arr3);
+const start = [1,2,3,4, 5 ,56,77,8,96,5433,44,4567,8765,43,33,44,63];
+// const end = [5,6,7];
+// const newar = [];
+// for(let i of start){
+//     newar.push(i);
+// }
+// for(let i of end){
+//     newar.push(i);
+// }
+// console.log(newar);
+// const newarr = start.concat(end);
+// console.log(newarr);
+// for(let i = 0;i<start.length;i++){
+//     if(start[i] == 3){
+//         console.log(i);
+//     }
+// }
+// const index = start.indexOf(44);
+// console.log(index);
+// const lindex = start.lastIndexOf(44);
+// console.log(lindex);
+// console.log(start.pop());
+// console.log(start.shift());
+// console.log(start.unshift(444));
+// console.log(start);
+// const sortedd = start.sort((a,b)=> a-b);z
+// console.log(sortedd);
+// filter
+// map
+// 
