@@ -48,12 +48,13 @@
 //     }
 //     console.log(s);
 // }
-// sum(1,2,3,4,5,6,7,8,9,10);
-let a = Number(prompt("Age ? "));
-if(a>=18){
-    document.writeln("yes");
-    document.writeln(typeof a);
-}else{
-    document.writeln("no");
-    document.writeln(typeof a);
-}
+// // sum(1,2,3,4,5,6,7,8,9,10);
+// let a = Number(prompt("Age ? "));
+// if(a>=18){
+//     document.writeln("yes");
+//     document.writeln(typeof a);
+// }else{
+//     document.writeln("no");
+//     document.writeln(typeof a);
+// }
+const arr = [1,2,3,4,5,6,7,8,9,10,'anant',null,undefined,NaN, false];
