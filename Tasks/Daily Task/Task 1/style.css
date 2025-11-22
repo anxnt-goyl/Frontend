@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.cardd{
+    align-items: center;
+    justify-content: center;
+    border:3px solid;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    margin: 30px;
+}
+#card{ 
+    transition: 0.3s;
+}
+.theme-white{
+    background: white;
+    color: black;
+    border-color: black;
+}
+.theme-black{
+    background: black;
+    color: white;
+    border-color: white;
+}
+.theme-blue{
+    background: #c9e3ff;
+    color: #022;
+    border-color: #022;
+}
+.theme-pink{
+    background: #ffb6c1;
+    color: #333;
+    border-color: #333;
+}
+.theme-green{
+    background: #c4f8c4;
+    color: #033;
+}

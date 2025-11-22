@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="studio">
+        <section  class="cardd" id="card">
+            <img id="profileImg" src="https://via.placeholder.com/120" alt="Profile Image" />
+            <h2 id="disName">User Name</h2>
+            <h4 id="disRoll">User Roll</h4>
+            <p id="disBio">User Bio</p>
+            <div class="skill-c" id="disSkill"></div>
+            <div id="disDetails"></div>
+        </section>
+        <section id ="control">
+            <form>
+                <fieldset>
+                    <legend>Control Panel</legend>
+                <div class="input-g" >
+                    <label>Name :</label><br>
+                    <input type="text"  id="inName">
+                </div>
+                <div  class="input-g">
+                    <label>Roll :</label><br>
+                    <input type="text" id="inRoll">
+                </div>
+                <div class="input-g">
+                    <label>Bio :</label><br>
+                    <input type="text" id="inBio">
+                </div>
+                <div  class="input-g" >
+                    <label>Skill</label><br>
+                    <input type="text" id="inSkill"><br>
+                    <button id="addSkill">Add</button>
+                    <button id="remSkill">Remove last Skill</button>
+                </div>
+                <div class="input-g" >
+                    <label>Theme</label><br>
+                    <select id="inTheme">
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Bue</option>
+                    </select>
+                </div>
+                <div  class="input-g">
+                    <button id="inToggle">
+                        Toggle  Details                    
+                    </button>
+                </div>
+                </fieldset>
+            </form>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
