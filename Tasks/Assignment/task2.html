@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container{
+            text-align: center;
+            background: white;
+            padding: 20px 30px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter your text</h2>
+        <input type="text" id="textA">
+        <p id="textCounter"> Characters left : 100</p>
+    </div>
+    <script>
+        const textA = document.getElementById("textA");
+        const max = 100;
+        const charC = document.getElementById("textCounter");
+        textA.addEventListener("input",()=>{
+            let r = max-textA.value.length;
+            charC.textContent = `Characters left : ${r}`;
+            if(r>50){
+                charC.style.color = "green";
+            }else if(r>20){
+                charC.style.color = "orange";
+            }else {
+                charC.style.color = "red";
+            }
+            if(r<=0){
+                textA.value = textA.value.substring(0,max);
+            }
+        })
+    </script>
+</body>
+</html>

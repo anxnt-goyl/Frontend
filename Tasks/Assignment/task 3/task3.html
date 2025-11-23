@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #cc{
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            width: 500px;
+            border-radius: 10px;
+        }
+        #cc img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .button{
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            border: none;
+        }
+    </style>
+</head>
+<body> 
+    <div  id = "cc">
+        <img id="caurosil" src="download.jpeg">
+        <div class="button">
+            <button id="pre">Previous</button>
+            <button id="next"> Next</button>
+        </div>
+    </div>
+    <script>
+        const imge = ["download.jpeg","download (1).jpeg","images (2).jpeg","pexels-steve-1269968.jpg","pexels-pixabay-259280.jpg"]
+        let i = 0;
+        const c = document.getElementById("caurosil");
+        const p = document.getElementById("pre");
+        const n = document.getElementById("next");
+        let interalId;
+        function showI(i){
+            c.src = imge[i];
+        }
+        function nextI(){
+            i = (i+1) % imge.length;
+            showI(i);
+        }
+        function prevI(){
+            i= (i- 1 + imge.length ) % imge.length;
+            showI(i);
+        }
+        p.addEventListener("click",()=>{
+            prevI();
+        })
+        n.addEventListener("click",()=>{
+            nextI();
+        })
+        function startS(){
+            interalId = setInterval(nextI , 3000);
+        }
+        function stopS(){
+            clearInterval(interalId);
+        }
+        startS();
+        const cc = document.querySelector("#cc");
+        cc.addEventListener("mouseenter",stopS);
+        cc.addEventListener("mouseleave",startS);
+    </script>
+</body>
+</html>

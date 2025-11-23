@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="reg">
+            <div class="g">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <small class="error"></small>
+            </div>
+            <div class="g">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <small class="error"></small>
+            </div>
+            <div class="g">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="password">
+                <small class="error"></small>
+            </div>
+            <button type="submit" id="btn"> Register</button>
+        </form>
+    </div>
+    <script>
+        const f = document.getElementById("reg");
+        const n = document.getElementById("name");
+        const em = document.getElementById("email");
+        const p = document.getElementById("pass");
+        const btn = document.getElementById("btn");
+        f.addEventListener('submit',function(e){
+            e.preventDefault();
+            let ifv = true;
+            if(n.value.trim()===''){
+                setE(n , "name is required");
+                ifv = false;
+            }else{
+                setS(n);
+            }
+            if(em.value.trim() === ''){
+                setE(em,"Email ?");
+                ifv = false;
+            }else if(!em.value.includes('@')){
+                setE(em,"Email must include '@'");
+                ifv = false;
+            }else{
+                setS(em);
+            }
+            if(p.value.trim() === ''){
+                setE(p,"password ?");
+                ifv = false;
+            }else if(p.value.length<8){
+                setE(p,"Less than 8");
+                ifv = false;
+            }else{
+                setS(p);
+            }
+            if(ifv){
+                alert("form submitted");
+                f.reset();
+                clb();
+            }
+        })
+        function setE(input , message){
+            const fg = input.parentElement;
+            const er = fg.querySelector('.error');
+            er.innerText = message;
+            input.classList.add('invalid');
+            input.classList.remove('valid');
+
+        }
+        function setS(input) {
+            const fg = input.parentElement;
+            const er = fg.querySelector('.error');
+            er.innerText = '';
+            input.classList.add('valid');
+            input.classList.remove('invalid');
+        }
+        function clb() {
+            [n, em, p].forEach(input => {
+                input.classList.remove('valid', 'invalid');
+            });
+        }
+    </script>
+</body>
+</html>
