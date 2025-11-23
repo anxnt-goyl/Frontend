@@ -23,7 +23,7 @@ body{
 .theme-black{
     background: black;
     color: white;
-    border-color: white;
+    border-color: red;
 }
 .theme-blue{
     background: #c9e3ff;
@@ -37,5 +37,6 @@ body{
 }
 .theme-green{
     background: #c4f8c4;
-    color: #033;
+    color: green;
+    border-color: green;
 }
