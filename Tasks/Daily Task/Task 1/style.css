@@ -11,6 +11,7 @@ body{
     height: auto;
     text-align: center;
     margin: 30px;
+    padding: 5px;
 }
 #card{ 
     transition: 0.3s;
@@ -39,4 +40,20 @@ body{
     background: #c4f8c4;
     color: green;
     border-color: green;
+}
+.skill-item{
+    padding: 6px 12px;
+    background: #444;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+.skill-c{
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    padding: 5px 10px;
+    margin: 4px;
+    border-radius: 12px;
 }

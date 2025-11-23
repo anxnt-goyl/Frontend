@@ -8,7 +8,7 @@ const n = document.getElementById("disName");
 const r = document.getElementById("disRoll");
 const b = document.getElementById("disBio");
 const s = document.getElementById("disSkill");
-const d = document.getElementById("disDetails");
+const d = document.getElementById("disTog");
 
 const add = document.getElementById("addSkill");
 const rem = document.getElementById("remSkill");
@@ -39,7 +39,7 @@ rem.addEventListener("click",function(e){
         lasts.remove();
     }
 });
-t.addEventListener("click",function(){
+t.addEventListener("click",function(e){
     e.preventDefault();
     if(d.style.display==="none"){
         d.style.display = "block";
