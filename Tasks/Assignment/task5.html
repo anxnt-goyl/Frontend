@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="search">
+            <label for="sear">Search</label>
+            <input type="text" name="search" id="sear">
+            <br><br><br>
+        </div>
+        <div id = "product">
+        </div>
+        <button class="all">All</button>
+        <button class="ele">Electronics</button>
+        <button class="cloth">Clothing</button>
+    </div>
+    <script>
+        const p = document.getElementById("product")
+        const s = document.getElementById("sear");
+        const all = document.querySelector(".all");
+        const ele = document.querySelector(".ele");
+        const cloth = document.querySelector(".cloth");
+        const l = [ { name: "Laptop", category: "electronics" },{ name: "T-Shirt", category: "clothing" },{ name: "Headphones", category: "electronics" },{ name: "Jeans", category: "clothing" },{name :"Top",category:"clothing"},{name : "tab",category:"electronics"},{ name: "Keyboard", category: "electronics" },{ name: "Cap", category: "clothing" },{ name: "Shoes", category: "clothing" },{ name: "Mouse", category: "electronics" }];
+        function display(list){
+            p.innerHTML ="" ;
+            list.forEach(element => {
+                const d = document.createElement("div");
+                d.classList.add("element");
+                d.textContent = element.name;
+                p.appendChild(d);
+            });            
+        }
+        function sh(category){
+            let f;
+            if(category === "all"){
+                f = l;  
+            }else{
+                f = l.filter(pp => pp.category === category);
+            }
+            display(f);
+        }
+        all.addEventListener("click",() => sh("all"));
+        ele.addEventListener("click",() => sh("electronics"));
+        cloth.addEventListener("click", () => sh("clothing"));
+        display(l);
+        function se(){
+            let k = s.value.toLowerCase();
+            let f = l.filter(p => p.category.toLowerCase().includes(k));
+            display(f);
+        }
+        sh("all");
+        s.addEventListener("keyup",se);
+    </script>
+</body>
+</html>
