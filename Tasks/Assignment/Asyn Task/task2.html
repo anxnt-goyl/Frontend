@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Random Joke</h2>
+    <div id="jb">
+        <p id="s"><b>Setup:</b>Loading....</p>
+        <p id="punch"><b>PunchLine:</b></p>
+    </div>
+    <button id="n">Next Joke</button>
+
+    <script>
+        const jb = document.getElementById("jb");
+        const s = document.getElementById("s");
+        const punch = document.getElementById("punch");
+        const n = document.getElementById("n");
+        function fjoke(){
+            n.disabled = true;
+            fetch("https://official-joke-api.appspot.com/random_joke")
+            .then(res => res.json())
+            .then(data =>{
+                s.innerHTML = `<b>Setup:</b> ${data.setup}`;
+                punch.innerHTML = `<b>Punchline:</b> ${data.punchline}`
+            })
+            .catch(error =>{
+                s.innerHTML =`<b> Error Loading...</b>`;
+                punch.innerHTML = "";
+            })
+            .finally(() =>{
+                n.disabled = false;
+            });
+        }
+        fjoke();
+        n.addEventListener("click",fjoke);
+    </script>
+</body>
+</html>
