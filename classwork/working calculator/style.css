@@ -1,0 +1,27 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.conatiner{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.but{
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    height: 50%;
+    width: 30%;
+
+.screen{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border: solid black 3px;
+}
+#eq{
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
