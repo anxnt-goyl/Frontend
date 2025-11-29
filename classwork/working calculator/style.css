@@ -7,21 +7,58 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
+    background-color: aquamarine;
 
 }
 .but{
     display: grid;
-    grid-template-columns: repeat(4,3fr);
+    grid-template-columns: repeat(4,5fr);
     height: 50%;
+    background: rgb(169, 218, 169);
+    border: solid 3px;
+  border-color: rgb(21, 193, 61);
     width: 30%;
-
+}
+.butt{
+  background: rgb(105, 223, 109);
+  border-color: rgb(21, 193, 61);
+  border-radius: 5px;
+}
+.butt:hover{
+  background: rgb(204, 226, 203);
+  scale: 1.07;
+  border-color: black;
+  box-shadow: 3px 5px 3px lightgreen;
+}
+#inp{
+  grid-column-start: 1;
+  grid-column-end: 5;
+    border: solid rgb(21, 193, 61) 3px;
+  background: rgb(204, 226, 203);
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+}
+#inp:hover{
+  scale: 1.07;
+}
+.ooo{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
 .screen{
   grid-column-start: 1;
   grid-column-end: 5;
-  border: solid black 3px;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  border: solid rgb(21, 193, 61) 3px;
+  background: rgb(204, 226, 203);
+  color: rgb(0, 0, 0);
+  text-align: right;
+  border-radius: 6px;
 }
 #eq{
   grid-column-start: 3;
   grid-column-end: 5;
 }
-

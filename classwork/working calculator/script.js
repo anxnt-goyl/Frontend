@@ -1,20 +1,5 @@
-const a1 = document.getElementById("btn1");
-const a2 = document.getElementById("btn2");
-const a3 = document.getElementById("btn3");
-const a4 = document.getElementById("btn4");
-const a5 = document.getElementById("btn5");
-const a6 = document.getElementById("btn6");
-const a7 = document.getElementById("btn7");
-const a8 = document.getElementById("btn8");
-const a9 = document.getElementById("btn9");
-const mul = document.getElementById("mul");
-const add = document.getElementById("add");
-const min = document.getElementById("min");
-const div = document.getElementById("div");
-const dot = document.getElementById("dot");
-const eq = document.getElementById("eq");
-const zero = document.getElementById("zero");
 
+let inp = document.querySelector("#inp");
 let display = document.querySelector(".screen");
 let butt = document.querySelectorAll(".butt");
 let a;
@@ -27,10 +12,17 @@ butt.forEach(btn => {
         if (vr=== "+"||vr === "-" || vr === "*" || vr ==="/") {
             a = display.textContent;
             opr = vr;
-            display.textContent = "";
+            display.textContent  += btn.textContent;
+        }
+        else if(vr === "C"){
+            a = 0;
+            opr = 0;
+            display.textContent = 0;
         }
         else if (vr === "=") {
-            b = display.textContent;
+            let ll = display.textContent;
+            let b = ll.split(opr)[1]; 
+
             if(opr==="+"){
             display.textContent = addValues(a, b);
         } else if (opr ==="-"){
