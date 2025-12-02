@@ -13,7 +13,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         t.innerHTML = `<td>${idx+1}</td>
         <td>${user.name}</td>
         <td>${user.email}</td>
-        <td>${user.address}</td>`
+        <td>${user.address.city}</td>`
     table.appendChild(t);
     });
     const u = document.querySelector(".users-data");

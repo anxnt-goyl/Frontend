@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        const a = document.querySelector(".container");
+        const i = document.createElement("input");
+        i.type ="text";
+        a.appendChild(i);
+        const p = document.createElement("p");
+        a.appendChild(p);
+        i.addEventListener("input",()=>{
+            let m = i.value.trim().length;
+            p.textContent=`Characters left : ${100-m}`;
+            if(100-m>60){
+                p.style.color="green";
+            }else if(100-m>45){
+                p.style.color="yellow";
+            }else if(100-m>0){
+                p.style.color="red";
+            }
+            if(m>99){
+                i.value = i.value.substring(0,99); 
+            }
+
+        })
+        
+
+    </script>
+</body>
+</html>
