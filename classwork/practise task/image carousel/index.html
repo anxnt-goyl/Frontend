@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            height: 300px;
+            width: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        const pics =["download (1).jpeg","download.jpeg","images (2).jpeg","pexels-eberhardgross-691668.jpg","pexels-pixabay-259280.jpg"];
+        let i = 0;
+        const a = document.createElement("div");
+        a.className="container";
+        const b = document.querySelector("body");
+        b.appendChild(a);
+        const pb = document.createElement("button");
+        pb.textContent="Previous"
+        a.appendChild(pb);
+        const c = document.createElement("img");
+        a.appendChild(c);
+        const nb = document.createElement("button");
+        nb.textContent = "Next";
+        a.appendChild(nb);
+        function si(i){
+            c.src = pics[i];
+        };
+        function nexI(){
+            i=(i+1)%pics.length;
+            si(i);
+        }
+        function preI(){
+            i=(i-1+pics.length)%pics.length;
+            si(i);
+        }
+        nb.addEventListener("click",nexI);
+        pb.addEventListener("click",preI);
+    </script>
+</body>
+</html>
