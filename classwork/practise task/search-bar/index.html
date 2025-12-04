@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Product Search</h2>
+        <input type="text" name="sb"class="sb"><br>
+        <div class="result"></div>
+    </div>
+    <script>
+        list = [{device:"Laptop",category:"Electronics"},{device:"Tablet",category:"Electronics"},{device:"Camera",category:"Photography"},{device:"SmartWatches",category:"Wearables"},{device:"Phone",category:"Electronics"},{device:"HeadPhones",category:"Audio"},{device:"Speaker",category:"Audio"}]
+        const i = document.querySelector(".sb");
+        const d = document.querySelector(".result");
+
+        function search(t){
+            d.innerHTML="";
+            const f = list.filter(p => p.device.toLowerCase().includes(t.toLowerCase()));
+            if(f.length === 0){
+                d.innerHTML="<p>No product found</p>";
+                return;
+            }
+            f.forEach(p => {
+                const h =(w,t)=>{
+                    if(t==="") return w;
+                    let start = w.toLowerCase().indexOf(t.toLowerCase());
+                    if(start === -1) return w;
+                    let end = start + t.length;
+                    return(w.slice(0,start)+"<span class='hh'>"+w.slice(start,end)+"</span>"+w.slice(end));
+                }
+                d.innerHTML+=`<p>${h(p.device,t)}-${p.category}</p>`;
+        })
+        }
+        i.addEventListener("input",()=>search(i.value));
+        search("");     
+    </script>
+</body>
+</html>

@@ -7,7 +7,6 @@ function addb(){
     const task = {id:Date.now() ,Text: tv };
     tasks.push(task);
     attd(task);
-    save(task);
     a.value='';
 }
 function attd(task){

@@ -63,29 +63,17 @@
             if(ifv){
                 alert("form submitted");
                 f.reset();
-                clb();
             }
         })
         function setE(input , message){
             const fg = input.parentElement;
             const er = fg.querySelector('.error');
             er.innerText = message;
-            input.classList.add('invalid');
-            input.classList.remove('valid');
-
         }
         function setS(input) {
             const fg = input.parentElement;
-            const er = fg.querySelector('.error');
-            er.innerText = '';
-            input.classList.add('valid');
-            input.classList.remove('invalid');
-        }
-        function clb() {
-            [n, em, p].forEach(input => {
-                input.classList.remove('valid', 'invalid');
-            });
-        }
+                const er = fg.querySelector('.error');
+                er.innerText = '';}
     </script>
 </body>
 </html>
